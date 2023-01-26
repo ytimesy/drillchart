@@ -3,6 +3,15 @@
 <div class='main'>
 
   <div class = "mychart">
+  <script>
+      let totalScores = JSON.parse('<%= @totalScores.to_json.html_safe %>');
+      let totalMaxScores = JSON.parse('<%= @totalMaxScores.to_json.html_safe %>');
+      let titles = JSON.parse('<%= @titles.to_json.html_safe %>');
+      let categorys = JSON.parse('<%= @categorys.to_json.html_safe %>');
+      let hrefValues = JSON.parse('<%= @hrefvalues.to_json.html_safe %>');
+      let scores = JSON.parse('<%= @scores.to_json.html_safe %>');
+      let maxSscores = JSON.parse('<%= @max_scores.to_json.html_safe %>');
+    </script>
     <canvas id="myChart"></canvas>
   </div>
 

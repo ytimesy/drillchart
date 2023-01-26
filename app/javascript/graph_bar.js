@@ -5,10 +5,10 @@ window.addEventListener('load', function(){
   let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ["基礎コース", "応用コース", "ドリル基礎", "ドリル応用", "総合学習"],
+      labels: [ "総合学習", "基礎コース", "応用コース", "ドリル基礎", "ドリル応用"],
       datasets: [{
         label: 'パーセント（％）',
-        data: [Math.floor(0.5*100), Math.floor(0.9*100), Math.floor(0.45*100), Math.floor(0.87*100), Math.floor(0.53*100)],
+        data: [Math.floor(totalScores[0]/totalMaxScores[0]*100), Math.floor(totalScores[1]/totalMaxScores[1]*100), Math.floor(totalScores[2]/totalMaxScores[2]*100), Math.floor(totalScores[3]/totalMaxScores[3]*100), Math.floor(totalScores[4]/totalMaxScores[4]*100)],
         backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',

@@ -54,4 +54,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'chartjs-rails'
-
+gem 'smarter_csv'
+gem 'csv'
