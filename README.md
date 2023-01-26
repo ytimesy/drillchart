@@ -1,3 +1,19 @@
+# テーブル設計
+
+## drills テーブル
+
+| Column        | Type    | Options                   |
+| ------------- | ------- | ------------------------- |
+| id            | integer | null: false, unique       |
+| title         | string  | null: false               |
+| category      | integer | null: false               |
+| htrfvalue     | string  | null: false               |
+| score         | integer | null: false               |
+| max_score     | integer | null: false               |
+
+### 保存先
+ CSV file : drills.csv
+
 # README
 
 This README would normally document whatever steps are necessary to get the
