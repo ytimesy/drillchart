@@ -2,6 +2,7 @@
   <div class='nav'>
     <ul class='lists-left'>
       <li><%= link_to 'テックキャンプから読込む', graphs_path, method: :post, id: "read_url_btn", class: "read_url_btn" %></li>
+      <li><%= link_to 'トップページ', root_path, id: "category_btn", class: "category_btn" %></li>
       <li><%= link_to '総合学習', graph_path(id: 1), id: "category_btn", class: "category_btn" %></li>
       <li><%= link_to '基礎コース', graph_path(id: 2), id: "category_btn", class: "category_btn" %></li>
       <li><%= link_to '応用コース', graph_path(id: 3), id: "category_btn", class: "category_btn" %></li>

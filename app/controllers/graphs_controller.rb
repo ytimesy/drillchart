@@ -6,20 +6,36 @@ class GraphsController < ApplicationController
   before_action :read_csv, only: [:index, :create, :show]
 
   def index
+    @category = 0
     caliculate_total_score
+    make_chart_data
   end
 
   def create
+    @category = 0
     deta_scrape
     output_csv
+    caliculate_total_score
+    make_chart_data
+    render :index
   end
 
   def show
+    @category = params[:id]
     caliculate_total_score
+    make_chart_data
   end
 
-
   private
+
+  def make_chart_data
+    @chartScores = [[], [], [], [], [], []]
+    @chartTitles = [[ "総合学習", "基礎コース", "応用コース", "ドリル基礎", "ドリル応用"], [], [], [], [], []]
+    @titles.each_with_index do |title, i|
+      @chartScores[@categorys[i]] << @scores[i]
+      @chartTitles[@categorys[i]] << @titles[i]
+    end
+  end
 
   def read_csv
     @ids_array = []

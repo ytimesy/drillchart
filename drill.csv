@@ -75,7 +75,7 @@ id,category,score,max_score,title,hrefvalue
 74,3,10,10,【定着ドリル Ruby】処理に名前をつけて使おう,https://master.tech-camp.in/expert_exam_questions/cEw3Rrd17uHsl0UTZnCn/expert_exam_responses/new
 75,4,10,10,【定着ドリル Rails】データの元となる設計図を作ろう,https://master.tech-camp.in/expert_exam_questions/unWVnK7HYyvGaVzBKOJc/expert_exam_responses/new
 76,5,7,10,【定着ドリル Ruby】クラスとインスタンスを使って実装しよう,https://master.tech-camp.in/expert_exam_questions/7QsBa5dQ6zn7CGrWTmOo/expert_exam_responses/new
-77,1,10,100,【定着ドリル Rails】Webアプリケーションの概要を学ぼう,https://master.tech-camp.in/expert_exam_questions/SPphhanRGFChv7lf4ama/expert_exam_responses/new
+77,4,10,10,【定着ドリル Rails】Webアプリケーションの概要を学ぼう,https://master.tech-camp.in/expert_exam_questions/SPphhanRGFChv7lf4ama/expert_exam_responses/new
 78,5,10,10,【定着ドリル Rails】リクエストとレスポンスを学ぼう,https://master.tech-camp.in/expert_exam_questions/MPQae2mXMkh1nAIPYXqq/expert_exam_responses/new
 79,5,10,10,【定着ドリル Rails】サーバーサイドを学ぼう,https://master.tech-camp.in/expert_exam_questions/xGkuLwH45jF4DDCpFGoP/expert_exam_responses/new
 80,5,10,10,【定着ドリル Rails】サーバを動かしてみよう,https://master.tech-camp.in/expert_exam_questions/NZ1BAJeiXE3ExIFqzloz/expert_exam_responses/new
@@ -106,7 +106,7 @@ id,category,score,max_score,title,hrefvalue
 105,5,8,10,【定着ドリル Rails】レスポンスに使う見た目を作ろう,https://master.tech-camp.in/expert_exam_questions/UKAQsXgR6RKsQELvKBxx/expert_exam_responses/new
 106,3,7,10,【練習問題 Ruby on Rails】フォームを追加しよう,https://master.tech-camp.in/expert_exam_questions/cEw3Rrd17uHsl0UTZnCn/expert_exam_responses/new
 107,5,5,10,【練習問題 Ruby on Rails】フォームから送信されたデータを保存しよう,https://master.tech-camp.in/expert_exam_questions/QMVTQ1scfSANnNSyH5D8/expert_exam_responses/new
-108,5,62,10,テックキャンプ基礎中間試験_エンジニア転職（基礎）ver.3.0.0,https://master.tech-camp.in/expert_exam_questions/tKUGHnGuvSVTWiu6QzeR/expert_exam_responses/new
+108,1,62,100,テックキャンプ基礎中間試験_エンジニア転職（基礎）ver.3.0.0,https://master.tech-camp.in/expert_exam_questions/tKUGHnGuvSVTWiu6QzeR/expert_exam_responses/new
 109,5,10,10,【定着ドリル】 HTMLとCSSの役割,https://master.tech-camp.in/expert_exam_questions/Zop7lUaFyPzHI3ccIdsg/expert_exam_responses/new
 110,4,10,10,【定着ドリル Ruby】複数の値に名前をつけて1つにまとめる,https://master.tech-camp.in/expert_exam_questions/CtICDsONaertmcVHV9Lx/expert_exam_responses/new
 111,4,10,10,【定着ドリル Ruby】条件分岐をしよう,https://master.tech-camp.in/expert_exam_questions/wexvkqupvzEwcQJPWVGj/expert_exam_responses/new
@@ -151,7 +151,7 @@ id,category,score,max_score,title,hrefvalue
 150,3,10,10,【定着ドリル Ruby】処理に名前をつけて使おう,https://master.tech-camp.in/expert_exam_questions/cEw3Rrd17uHsl0UTZnCn/expert_exam_responses/new
 151,5,10,10,【定着ドリル Rails】データの元となる設計図を作ろう,https://master.tech-camp.in/expert_exam_questions/QMVTQ1scfSANnNSyH5D8/expert_exam_responses/new
 152,5,10,10,【定着ドリル Ruby】クラスとインスタンスを使って実装しよう,https://master.tech-camp.in/expert_exam_questions/7QsBa5dQ6zn7CGrWTmOo/expert_exam_responses/new
-153,1,10,100,【定着ドリル Rails】Webアプリケーションの概要を学ぼう,https://master.tech-camp.in/expert_exam_questions/SPphhanRGFChv7lf4ama/expert_exam_responses/new
+153,4,10,10,【定着ドリル Rails】Webアプリケーションの概要を学ぼう,https://master.tech-camp.in/expert_exam_questions/SPphhanRGFChv7lf4ama/expert_exam_responses/new
 154,5,10,10,【定着ドリル Rails】リクエストとレスポンスを学ぼう,https://master.tech-camp.in/expert_exam_questions/MPQae2mXMkh1nAIPYXqq/expert_exam_responses/new
 155,5,0,10,【定着ドリル Rails】サーバーサイドを学ぼう,https://master.tech-camp.in/expert_exam_questions/xGkuLwH45jF4DDCpFGoP/expert_exam_responses/new
 156,5,10,10,【定着ドリル Rails】サーバを動かしてみよう,https://master.tech-camp.in/expert_exam_questions/NZ1BAJeiXE3ExIFqzloz/expert_exam_responses/new
