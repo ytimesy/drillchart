@@ -73,44 +73,34 @@ class GraphsController < ApplicationController
     href_values = atags.map { |a| a.attribute("href") }
     new_href_values = href_values.grep(/expert_exam_responses/)
 
-    
-    new_href_values.each_with_index do |href_value, i|
+    titles.each_with_index do |title, i|
       #サイトから取り出したurlを問題集のURLに改変
-      str_splited = href_value.split("/")
+      str_splited = new_href_values[i].split("/")
       if str_splited.last == "edit"
         str_splited.pop
       end
       str_splited.pop
       str_splited.push("new")
       raw_href = str_splited.join("/")
-      if titles[i] != nil
-        string_array = titles[i].text.split("\n")
-      else
-        break
-      end
+      string_array = title.text.split("\n")
       score_str = string_array[1].match(/\d+/).to_s
-      unless @hrefvalues.include?(raw_href)
-        #新しいURLなら追加
-        @ids_array << (@hrefvalues.length + 1)
-        @categorys << 1
-        @scores << score_str.to_i
-        @max_scores << 10
-        @titles << string_array[0].to_s
-        @hrefvalues << raw_href
+      
+      num = @hrefvalues.index(raw_href)
+      if num != nil 
+        @categorys[i] = @categorys[num]
+        @max_scores[i] = @max_scores[num]        
       else
-        #@hrefvaluesにURLを持っている場合上書き
-        num = @hrefvalues.index(raw_href)
-        @ids_array[num] = num + 1
-        if score_str.to_i 
-          @scores[num] = score_str.to_i
-        end
-        @titles[num] = string_array[0].to_s
-        @hrefvalues[num] = raw_href
+        @categorys[i] = 5
+        @max_scores[i] = 10   
       end
+      @ids_array[i] = i + 1
+      @scores[i] = score_str.to_i
+      @titles[i] = string_array[0].to_s
+      @hrefvalues[i] = raw_href
     end
 
     driver.quit
-    
+    binding.pry
   end
 
   def output_csv
