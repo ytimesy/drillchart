@@ -3,7 +3,7 @@ require 'open-uri'
 require 'webdrivers'
 
 class GraphsController < ApplicationController
-  before_action :read_csv, only: [:index, :create, :show]
+  before_action :read_csv, only: [ :index, :create, :show ]
 
   def index
     @category = 0
@@ -41,19 +41,31 @@ class GraphsController < ApplicationController
 
   def read_csv
     @ids_array = []
-    @titles = []
     @categorys = []
-    @hrefvalues = []
     @scores = []
     @max_scores = []
-    CSV.foreach("./drill.csv", headers: true) do |row|
-      @ids_array << row['id'].to_i
-      @titles << row['title']
-      @categorys << row['category'].to_i
-      @hrefvalues << row['hrefvalue']
-      @scores << row['score'].to_i
-      @max_scores << row['max_score'].to_i
+    @titles = []
+    @hrefvalues = []
+    begin
+      CSV.foreach("./drill.csv", headers: true) do |row|
+        @ids_array << row['id'].to_i
+        @categorys << row['category'].to_i
+        @scores << row['score'].to_i
+        @max_scores << row['max_score'].to_i
+        @titles << row['title']
+        @hrefvalues << row['hrefvalue']
+      end
+    rescue Errno::ENOENT => e
+      CSV.foreach("./drill_init.csv", headers: true) do |row|
+        @ids_array << row['id'].to_i
+        @categorys << row['category'].to_i
+        @scores << row['score'].to_i
+        @max_scores << row['max_score'].to_i
+        @titles << row['title']
+        @hrefvalues << row['hrefvalue']
+      end
     end
+    
   end
 
   def caliculate_total_score
