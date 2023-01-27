@@ -137,7 +137,7 @@ id,category,score,max_score,title,hrefvalue
 136,4,10,10,【定着ドリル Rails】レスポンスに使う見た目を作ろう,https://master.tech-camp.in/expert_exam_questions/wZP8qBUOoIos13ABGdUr/expert_exam_responses/new
 137,5,10,10,【定着ドリル Rails】データの保存場所と管理役を作ろう,https://master.tech-camp.in/expert_exam_questions/mTAwfD3iKXBi4bVIzRHp/expert_exam_responses/new
 138,4,10,10,【定着ドリル Rails】データを保存しよう,https://master.tech-camp.in/expert_exam_questions/9lYOIWJ4HKLVPEJ7KL0n/expert_exam_responses/new
-139,5,10,10,【定着ドリル CLI操作とLinuxコマンド】ターミナルによるCLI操作を学ぼう,https://master.tech-camp.in/expert_exam_questions/tKUGHnGuvSVTWiu6QzeR/expert_exam_responses/new
+139,4,10,10,【定着ドリル CLI操作とLinuxコマンド】ターミナルによるCLI操作を学ぼう,https://master.tech-camp.in/expert_exam_questions/tKUGHnGuvSVTWiu6QzeR/expert_exam_responses/new
 140,5,10,10,【定着ドリル CLI操作とLinuxコマンド】Linuxコマンドについて学ぼう,https://master.tech-camp.in/expert_exam_questions/Zop7lUaFyPzHI3ccIdsg/expert_exam_responses/new
 141,4,10,10,【定着ドリル Ruby】プログラミング言語に触れてみよう,https://master.tech-camp.in/expert_exam_questions/CtICDsONaertmcVHV9Lx/expert_exam_responses/new
 142,4,8,10,【定着ドリル Ruby】文字列と数値を使おう,https://master.tech-camp.in/expert_exam_questions/wW7jiTfcawersBeBOWcn/expert_exam_responses/new
@@ -164,7 +164,7 @@ id,category,score,max_score,title,hrefvalue
 163,5,8,10,【定着ドリル Rails】レスポンスに使う見た目を作ろう,https://master.tech-camp.in/expert_exam_questions/BntLc6VTk5Ze3VNuvS1M/expert_exam_responses/new
 164,5,8,10,【定着ドリル Rails】データの保存場所と管理役を作ろう,https://master.tech-camp.in/expert_exam_questions/kru2RcfRHGwqJBnH85KH/expert_exam_responses/new
 165,4,10,10,【定着ドリル Rails】データを保存しよう,https://master.tech-camp.in/expert_exam_questions/9lYOIWJ4HKLVPEJ7KL0n/expert_exam_responses/new
-166,5,0,10,エンジニア転職（応用）ver.3.0.0 Railsエラー問題1,https://master.tech-camp.in/expert_exam_questions/tKUGHnGuvSVTWiu6QzeR/expert_exam_responses/new
+166,3,0,10,エンジニア転職（応用）ver.3.0.0 Railsエラー問題1,https://master.tech-camp.in/expert_exam_questions/tKUGHnGuvSVTWiu6QzeR/expert_exam_responses/new
 167,5,10,10,応用Lesson5_1 章末問題,https://master.tech-camp.in/expert_exam_questions/Zop7lUaFyPzHI3ccIdsg/expert_exam_responses/new
 168,4,10,10,【定着ドリル Rails】保存したデータを取得して表示しよう,https://master.tech-camp.in/expert_exam_questions/CtICDsONaertmcVHV9Lx/expert_exam_responses/new
 169,4,5,10,【定着ドリル Rails】フォームを追加しよう,https://master.tech-camp.in/expert_exam_questions/wW7jiTfcawersBeBOWcn/expert_exam_responses/new

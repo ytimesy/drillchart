@@ -29,9 +29,11 @@ class GraphsController < ApplicationController
   private
 
   def make_chart_data
+    @chartUrl = [[], [], [], [], [], []]
     @chartScores = [[], [], [], [], [], []]
     @chartTitles = [[ "総合学習", "基礎コース", "応用コース", "ドリル基礎", "ドリル応用"], [], [], [], [], []]
     @titles.each_with_index do |title, i|
+      @chartUrl[@categorys[i]] << @hrefvalues[i]
       @chartScores[@categorys[i]] << @scores[i]
       @chartTitles[@categorys[i]] << @titles[i]
     end

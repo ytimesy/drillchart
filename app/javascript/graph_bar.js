@@ -30,6 +30,12 @@ if(category == 0){
       }]
     },
     options: {
+      onClick: function(event, elements) {
+        if (elements.length > 0) {
+            let index = elements[0].index;
+            window.location.replace(`/graphs/${index+1}`)
+        }
+      },
       indexAxis: 'y',
       plugins: {
         title: {
@@ -87,6 +93,13 @@ if(category == 0){
       }]
     },
     options: {
+      onClick: function(event, elements) {
+        if (elements.length > 0) {
+            let index = elements[0].index;
+            let url = chartUrl[category][index];
+            window.open(url, '_blank');
+        }
+      },
       indexAxis: 'y',
       plugins: {
         title: {
