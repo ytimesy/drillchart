@@ -12,6 +12,7 @@ class GraphsController < ApplicationController
   def create
     read_csv
     deta_scrape
+    output_csv
   end
 
 
@@ -112,6 +113,15 @@ class GraphsController < ApplicationController
     
   end
 
-  
+  def output_csv
+    CSV.open("./drill.csv", "w") do |csv|
+      header = %w(id category score max_score title hrefvalue )
+      csv << header
+      @categorys.each_with_index do |category, i|
+        values = [ @ids_array[i], category, @scores[i], @max_scores[i], @titles[i], @hrefvalues[i] ]
+        csv << values
+      end
+    end
+  end
 
 end
