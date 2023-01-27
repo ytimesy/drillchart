@@ -3,16 +3,19 @@ require 'open-uri'
 require 'webdrivers'
 
 class GraphsController < ApplicationController
+  before_action :read_csv, only: [:index, :create, :show]
 
   def index
-    read_csv
     caliculate_total_score
   end
 
   def create
-    read_csv
     deta_scrape
     output_csv
+  end
+
+  def show
+    caliculate_total_score
   end
 
 
@@ -100,7 +103,6 @@ class GraphsController < ApplicationController
     end
 
     driver.quit
-    binding.pry
   end
 
   def output_csv
