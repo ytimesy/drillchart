@@ -1,9 +1,11 @@
 window.addEventListener('load', function(){
   
   let ctx = document.getElementById('myChart');
+
   let titleTexts = [ `テックキャンプ  問題  理解度 グラフ`, `学習ガイド/基礎試験(${chartTitles[category].length}問)  理解度`, `基礎コース(${chartTitles[category].length}問)  理解度`, `応用コース(${chartTitles[category].length}問)  理解度`, `ドリル基礎(${chartTitles[category].length}問)  理解度`, `ドリル応用(${chartTitles[category].length}問)  理解度`];
 
 if(category == 0){
+  ctx.height = `${25*chartTitles[category].length}`;
   let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -67,6 +69,16 @@ if(category == 0){
     }  
   });
 }else{
+  if( category == 1 ){
+    ctx.height = `${15*chartTitles[category].length}`;
+
+  } else if( category == 5 ){
+    ctx.height = `${7*chartTitles[category].length}`;
+
+  } else{
+    ctx.height = `${10*chartTitles[category].length}`;
+  }
+
   let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
