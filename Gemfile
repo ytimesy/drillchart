@@ -58,3 +58,6 @@ gem 'smarter_csv'
 gem 'csv'
 gem 'selenium-webdriver'
 gem 'webdrivers'
+group :production do
+  
+end
