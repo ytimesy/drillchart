@@ -98,15 +98,6 @@ class GraphsController < ApplicationController
     options.add_argument("--headless")
     driver = Selenium::WebDriver.for :chrome, options: options
     driver.navigate.to "https://master.tech-camp.in/me#expert-exam"
-    email_field = driver.find_element(:id, 'email_input')
-    email_field.send_keys(ENV["TECH_ADDRESS"])
-    sleep(1)
-    password_field = driver.find_element(:id, 'password_input')
-    password_field.send_keys(ENV["TECH_PASSWORD"])
-    sleep(1)
-    login_button = driver.find_element(:id, 'signin_button')
-    login_button.click
-    sleep(1)
     wait = Selenium::WebDriver::Wait.new(timeout: 1000) # seconds
     wait.until { driver.find_element(:css, 'a[href="#expert-exam"]').displayed? }
     link = driver.find_element(:css, 'a[href="#expert-exam"]')
