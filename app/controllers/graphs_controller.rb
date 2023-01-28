@@ -3,7 +3,7 @@ require 'open-uri'
 require 'webdrivers'
 
 class GraphsController < ApplicationController
-  before_action :read_csv, only: [ :index, :create, :show ]
+  before_action :read_csv, only: [ :index, :show ]
 
   def index
     @category = 0
@@ -13,6 +13,7 @@ class GraphsController < ApplicationController
 
   def create
     @category = 0
+    read_init_csv
     deta_scrape
     output_csv
     caliculate_total_score
@@ -31,11 +32,28 @@ class GraphsController < ApplicationController
   def make_chart_data
     @chartUrl = [[], [], [], [], [], []]
     @chartScores = [[], [], [], [], [], []]
-    @chartTitles = [[ "総合学習", "基礎コース", "応用コース", "ドリル基礎", "ドリル応用"], [], [], [], [], []]
+    @chartTitles = [[ "学習ガイド/基礎試験", "基礎コース", "応用コース", "ドリル基礎", "ドリル応用"], [], [], [], [], []]
     @titles.each_with_index do |title, i|
       @chartUrl[@categorys[i]] << @hrefvalues[i]
       @chartScores[@categorys[i]] << @scores[i]
       @chartTitles[@categorys[i]] << @titles[i]
+    end
+  end
+
+  def read_init_csv
+    @ids_array = []
+    @categorys = []
+    @scores = []
+    @max_scores = []
+    @titles = []
+    @hrefvalues = []
+    CSV.foreach("./drill_init.csv", headers: true) do |row|
+      @ids_array << row['id'].to_i
+      @categorys << row['category'].to_i
+      @scores << row['score'].to_i
+      @max_scores << row['max_score'].to_i
+      @titles << row['title']
+      @hrefvalues << row['hrefvalue']
     end
   end
 
@@ -56,14 +74,7 @@ class GraphsController < ApplicationController
         @hrefvalues << row['hrefvalue']
       end
     rescue Errno::ENOENT => e
-      CSV.foreach("./drill_init.csv", headers: true) do |row|
-        @ids_array << row['id'].to_i
-        @categorys << row['category'].to_i
-        @scores << row['score'].to_i
-        @max_scores << row['max_score'].to_i
-        @titles << row['title']
-        @hrefvalues << row['hrefvalue']
-      end
+      read_init_csv
     end
     
   end
@@ -106,33 +117,39 @@ class GraphsController < ApplicationController
     href_values = atags.map { |a| a.attribute("href") }
     new_href_values = href_values.grep(/expert_exam_responses/)
 
-    titles.each_with_index do |title, i|
+    ids = 0
+    new_href_values.each_with_index do |new_href_value, i|
       #サイトから取り出したurlを問題集のURLに改変
-      str_splited = new_href_values[i].split("/")
-      if str_splited.last == "edit"
+      str_splited = new_href_value.split("/")
+      if str_splited.last != "edit"
         str_splited.pop
+        str_splited.push("new")
+        raw_href = str_splited.join("/")
+        string_array = titles[ids].text.split("\n")
+        score_str = string_array[1].match(/\d+/).to_s
+        
+        @ids_array[ids] = ids + 1
+        @scores[ids] = score_str.to_i
+        @titles[ids] = string_array[0].to_s
+        @hrefvalues[ids] = raw_href
+        num = @hrefvalues.index(raw_href)
+        if num != nil 
+          @categorys[ids] = @categorys[num]
+          @max_scores[ids] = @max_scores[num]        
+        else
+          if @scores[ids] > 10
+            @categorys[ids] = 1
+            @max_scores[ids] = 100   
+          else
+            @categorys[ids] = 5
+            @max_scores[ids] = 10   
+          end
+        end
+        ids += 1
       end
-      str_splited.pop
-      str_splited.push("new")
-      raw_href = str_splited.join("/")
-      string_array = title.text.split("\n")
-      score_str = string_array[1].match(/\d+/).to_s
-      
-      num = @hrefvalues.index(raw_href)
-      if num != nil 
-        @categorys[i] = @categorys[num]
-        @max_scores[i] = @max_scores[num]        
-      else
-        @categorys[i] = 5
-        @max_scores[i] = 10   
-      end
-      @ids_array[i] = i + 1
-      @scores[i] = score_str.to_i
-      @titles[i] = string_array[0].to_s
-      @hrefvalues[i] = raw_href
     end
-
     driver.quit
+
   end
 
   def output_csv
@@ -141,6 +158,17 @@ class GraphsController < ApplicationController
       csv << header
       @categorys.each_with_index do |category, i|
         values = [ @ids_array[i], category, @scores[i], @max_scores[i], @titles[i], @hrefvalues[i] ]
+        csv << values
+      end
+    end
+  end
+
+  def make_init_csv_for_kanri
+    CSV.open("./drill_init.csv", "w") do |csv|
+      header = %w(id category score max_score title hrefvalue )
+      csv << header
+      @categorys.each_with_index do |category, i|
+        values = [ @ids_array[i], category, 0, @max_scores[i], @titles[i], @hrefvalues[i] ]
         csv << values
       end
     end
