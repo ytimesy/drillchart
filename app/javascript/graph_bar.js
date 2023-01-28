@@ -1,11 +1,15 @@
 window.addEventListener('load', function(){
   
   let ctx = document.getElementById('myChart');
-  
+
+  let titleTexts = [ `テックキャンプ  問題  理解度 グラフ`, `学習ガイド/基礎試験(${chartTitles[category].length}問)  理解度`, `基礎コース(${chartTitles[category].length}問)  理解度`, `応用コース(${chartTitles[category].length}問)  理解度`, `ドリル基礎(${chartTitles[category].length}問)  理解度`, `ドリル応用(${chartTitles[category].length}問)  理解度`];
+
+if(category == 0){
+  ctx.height = `${25*chartTitles[category].length}`;
   let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [ "総合学習", "基礎コース", "応用コース", "ドリル基礎", "ドリル応用"],
+      labels: chartTitles[category],
       datasets: [{
         label: 'パーセント（％）',
         data: [Math.floor(totalScores[0]/totalMaxScores[0]*100), Math.floor(totalScores[1]/totalMaxScores[1]*100), Math.floor(totalScores[2]/totalMaxScores[2]*100), Math.floor(totalScores[3]/totalMaxScores[3]*100), Math.floor(totalScores[4]/totalMaxScores[4]*100)],
@@ -28,11 +32,17 @@ window.addEventListener('load', function(){
       }]
     },
     options: {
+      onClick: function(event, elements) {
+        if (elements.length > 0) {
+            let index = elements[0].index;
+            window.location.replace(`/graphs/${index+1}`)
+        }
+      },
       indexAxis: 'y',
       plugins: {
         title: {
           display: true,
-          text: 'テックキャンプ問題  理解度  グラフ',
+          text: titleTexts[category],
           font:{
             size: 30,
             weight: 600
@@ -58,6 +68,81 @@ window.addEventListener('load', function(){
       }
     }  
   });
+}else{
+  if( category == 1 ){
+    ctx.height = `${15*chartTitles[category].length}`;
+
+  } else if( category == 5 ){
+    ctx.height = `${7*chartTitles[category].length}`;
+
+  } else{
+    ctx.height = `${10*chartTitles[category].length}`;
+  }
+
+  let myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: chartTitles[category],
+      datasets: [{
+        label: 'パーセント（％）',
+        data: chartScores[category],
+        backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(75, 100, 192, 0.2)'
+        ],
+        borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(75, 100, 192, 1)'
+        ],
+        borderWidth: 1,
+        borderRadius: 5
+      }]
+    },
+    options: {
+      onClick: function(event, elements) {
+        if (elements.length > 0) {
+            let index = elements[0].index;
+            let url = chartUrl[category][index];
+            window.open(url, '_blank');
+        }
+      },
+      indexAxis: 'y',
+      plugins: {
+        title: {
+          display: true,
+          text: titleTexts[category],
+          font:{
+            size: 30,
+            weight: 600
+          },
+          color: '#666',
+          padding: {
+            top: 10,
+            bottom: 30
+          }
+        }
+      },
+      scales: {
+          y: {
+          beginAtZero: true,
+          display: true,
+          text: 'ラベル',
+            font:{
+            size: 180,
+            weight: 300
+          },
+          color: '#666'
+        }
+      }
+    }  
+  });
+}
 
   
 });

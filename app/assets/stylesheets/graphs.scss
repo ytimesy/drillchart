@@ -1,3 +1,39 @@
-// Place all the styles related to the graphs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+}
+
+.read_url_btn {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #34b90c;
+}
+
+.category_btn {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.exit_btn{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #b90c57;
+}
+
+.content{
+  font-size: medium;
+  color: rgb(190, 8, 8);
+  text-align: right;
+}
