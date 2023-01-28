@@ -27,6 +27,11 @@ class GraphsController < ApplicationController
     make_chart_data
   end
 
+  def destroy
+    File.delete("#{Rails.root}/drill.csv")
+    render :index
+  end
+
   private
 
   def make_chart_data

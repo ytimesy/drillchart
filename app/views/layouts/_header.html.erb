@@ -8,7 +8,9 @@
       <li><%= link_to '応用コース', graph_path(id: 3), id: "category_btn", class: "category_btn" %></li>
       <li><%= link_to 'ドリル基礎', graph_path(id: 4), id: "category_btn", class: "category_btn" %></li>
       <li><%= link_to 'ドリル応用', graph_path(id: 5), id: "category_btn", class: "category_btn" %></li>
+      <li><%= link_to 'データ削除', graph_path(id: 1), method: :delete, id: "exit_btn", class: "exit_btn" %></li>
     </ul>
-
   </div>
+  <div class='content'>（注）ブラウザを閉じる前にデータ削除してください。</div>
+
 </header>
