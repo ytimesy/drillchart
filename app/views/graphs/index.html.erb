@@ -1,21 +1,10 @@
 <%= render "layouts/header" %>
 
-<div class='main'>
-
-  <div class = "mychart">
-  <script>
-      let category = JSON.parse('<%= @category.to_json.html_safe %>');
-      let totalScores = JSON.parse('<%= @totalScores.to_json.html_safe %>');
-      let totalMaxScores = JSON.parse('<%= @totalMaxScores.to_json.html_safe %>');
-      let titles = JSON.parse('<%= @titles.to_json.html_safe %>');
-      let categorys = JSON.parse('<%= @categorys.to_json.html_safe %>');
-      let hrefValues = JSON.parse('<%= @hrefvalues.to_json.html_safe %>');
-      let scores = JSON.parse('<%= @scores.to_json.html_safe %>');
-      let maxSscores = JSON.parse('<%= @max_scores.to_json.html_safe %>');
-      let chartScores = JSON.parse('<%= @chartScores.to_json.html_safe %>');
-      let chartTitles = JSON.parse('<%= @chartTitles.to_json.html_safe %>');
-    </script>
-    <canvas id="myChart"></canvas>
+<div class='top-main'>
+  <div class="hero">
+    <h1 class='content'>データをとる　をクリックしましょうログイン後は手を置いて、１３秒ほどお待ちください。</h1>
+    <%= image_tag "hero.jpg", class: "drill-image" %>
   </div>
-
 </div>
+
+<%= render "layouts/footer" %>

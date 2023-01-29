@@ -1,7 +1,6 @@
 window.addEventListener('load', function(){
   
   let ctx = document.getElementById('myChart');
-
   let titleTexts = [ `テックキャンプ  問題  理解度 グラフ`, `学習ガイド/基礎試験(${chartTitles[category].length}問)  理解度`, `基礎コース(${chartTitles[category].length}問)  理解度`, `応用コース(${chartTitles[category].length}問)  理解度`, `ドリル基礎(${chartTitles[category].length}問)  理解度`, `ドリル応用(${chartTitles[category].length}問)  理解度`];
 
 if(category == 0){
@@ -84,7 +83,7 @@ if(category == 0){
     data: {
       labels: chartTitles[category],
       datasets: [{
-        label: 'パーセント（％）',
+        label: '点',
         data: chartScores[category],
         backgroundColor: [
               'rgba(255, 99, 132, 0.2)',

@@ -1,9 +1,8 @@
 <%= render "layouts/header" %>
 
 <div class='main'>
-
   <div class = "mychart">
-  <script>
+    <script>
       let category = JSON.parse('<%= @category.to_json.html_safe %>');
       let totalScores = JSON.parse('<%= @totalScores.to_json.html_safe %>');
       let totalMaxScores = JSON.parse('<%= @totalMaxScores.to_json.html_safe %>');
@@ -15,8 +14,7 @@
       let chartScores = JSON.parse('<%= @chartScores.to_json.html_safe %>');
       let chartTitles = JSON.parse('<%= @chartTitles.to_json.html_safe %>');
       let chartUrl = JSON.parse('<%= @chartUrl.to_json.html_safe %>');
-   </script>
+    </script>
     <canvas id="myChart"></canvas>
   </div>
-
 </div>

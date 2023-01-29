@@ -3,12 +3,9 @@ require 'open-uri'
 require 'webdrivers'
 
 class GraphsController < ApplicationController
-  before_action :read_csv, only: [ :index, :show ]
 
   def index
-    @category = 0
-    caliculate_total_score
-    make_chart_data
+    destroy
   end
 
   def create
@@ -18,17 +15,18 @@ class GraphsController < ApplicationController
     output_csv
     caliculate_total_score
     make_chart_data
-    render :index
+    render :show
   end
 
   def show
     @category = params[:id]
+    read_csv
     caliculate_total_score
     make_chart_data
   end
 
   def destroy
-    File.delete("#{Rails.root}/drill.csv")
+    File.delete("#{Rails.root}/drill.csv") rescue nil
     render :index
   end
 

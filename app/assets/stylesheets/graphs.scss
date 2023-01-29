@@ -1,12 +1,20 @@
-
-
-.nav {
-  font-size: 18px;
+// header
+.header {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
+  align-items: center;
+  width: 100vw;
+  padding: 0 0 0 30px;
+  background-color: #FAFAFA;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .lists-left {
@@ -15,25 +23,63 @@
 }
 
 .read_url_btn {
+  font-size: 18px;
   text-decoration: none;
+  font-weight: 600;
   margin-right: 3vw;
-  color: #34b90c;
+  color: #6b53ba;
 }
 
 .category_btn {
+  font-size: 18px;
   text-decoration: none;
+  font-weight: 600;
   margin-right: 3vw;
-  color: #333333;
+  color: #7c7171;
 }
 
-.exit_btn{
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #b90c57;
+// footer
+.footer {
+  width: 100vw;
+  height: 50px;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+
+.copyright {
+  line-height: 70px;
+  text-align: center;
+  font-size: 16px;
+  color: #959393;
+}
+
+// index, show
+.top-main{
+  width: 100vw;
+  height: calc(100vh - 100px - 70px);
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero{
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 100px - 70px);
+}
+
+.drill-image{
+  background-image: url(/assets/image/hero.jpg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 30%;
 }
 
 .content{
+  position: absolute;
   font-size: medium;
-  color: rgb(190, 8, 8);
-  text-align: right;
+  color: #6b53ba;
+  text-align: left;
 }
