@@ -59,5 +59,5 @@ gem 'csv'
 gem 'selenium-webdriver'
 gem 'webdrivers'
 group :production do
-  
+  gem 'pg'
 end
