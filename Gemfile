@@ -58,6 +58,7 @@ gem 'smarter_csv'
 gem 'csv'
 gem 'selenium-webdriver'
 gem 'webdrivers'
+gem 'mail', '2.7.1'
 group :production do
   gem 'pg'
 end
