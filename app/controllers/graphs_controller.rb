@@ -126,8 +126,16 @@ class GraphsController < ApplicationController
         @hrefvalues[ids] = raw_href
         num = @hrefvalues.index(raw_href)
         if num != nil 
-          @categorys[ids] = @categorys[num]
-          @max_scores[ids] = @max_scores[num]        
+          if @categorys[num] != nil
+            @categorys[ids] = @categorys[num]
+          else
+            @categorys[ids] = 5
+          end
+          if @max_scores[num] != nil
+            @max_scores[ids] = @max_scores[num]
+          else
+            @max_scores[ids] = 10
+          end
         else
           if @scores[ids] > 10
             @categorys[ids] = 1
