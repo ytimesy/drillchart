@@ -13,7 +13,6 @@ chmod +x chromedriver
 
 # Move ChromeDriver to the current directory
 APP_DIR="./"
-mv chromedriver $APP_DIR
 
 # Set the path to ChromeDriver in your application
 export PATH=$PATH:$APP_DIR
