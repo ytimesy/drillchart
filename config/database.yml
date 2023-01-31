@@ -31,8 +31,8 @@ test:
 
 production:
   <<: *default
-  adapter: sqlite3
+  adapter: mysql2
   database: drillchart_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/sqlite3/sqlite3.sock
+  socket: /var/lib/mysql/mysql.sock
