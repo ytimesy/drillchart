@@ -10,13 +10,10 @@ unzip chromedriver_linux64.zip
 
 # Make ChromeDriver executable
 chmod +x chromedriver
-mv chromedriver /usr/local/bin/
-
-# ChromeDriver to the current directory
-APP_DIR="/usr/local/bin/"
 
 # Set the path to ChromeDriver in my application
-export PATH=$PATH:$APP_DIR
+export CHROME_DRIVER_BIN=`which chromedriver`
+export PATH=$PATH:$CHROME_DRIVER_BIN
 
 bundle install
 bundle exec rake assets:precompile
