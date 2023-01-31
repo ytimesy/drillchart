@@ -9,8 +9,8 @@ wget https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linu
 unzip chromedriver_linux64.zip
 
 # Make ChromeDriver executable
-sudo chmod +x chromedriver
-sudo mv chromedriver /usr/local/bin/
+chmod +x chromedriver
+mv chromedriver /usr/local/bin/
 
 # ChromeDriver to the current directory
 APP_DIR="/usr/local/bin/"
