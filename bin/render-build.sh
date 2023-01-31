@@ -2,7 +2,7 @@
 # exit on error
 set -o errexit
 
-sudo apt install chromedriver
+apt install chromedriver
 
 bundle install
 bundle exec rake assets:precompile
