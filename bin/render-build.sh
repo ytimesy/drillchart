@@ -11,11 +11,14 @@ unzip chromedriver_linux64.zip
 # Make ChromeDriver executable
 chmod +x chromedriver
 
-# Move ChromeDriver to the current directory
+# ChromeDriver to the current directory
 APP_DIR="./"
 
-# Set the path to ChromeDriver in your application
+# Set the path to ChromeDriver in my application
 export PATH=$PATH:$APP_DIR
+
+# install webdriver gem
+gem install selenium-webdriver
 
 bundle install
 bundle exec rake assets:precompile
