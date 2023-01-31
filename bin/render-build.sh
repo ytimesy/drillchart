@@ -14,6 +14,8 @@ chmod +x chromedriver
 # Set the path to ChromeDriver in my application
 export CHROME_DRIVER_BIN=`which chromedriver`
 export PATH=$PATH:$CHROME_DRIVER_BIN
+export PATH=$PATH:'./'
+
 
 bundle install
 bundle exec rake assets:precompile
