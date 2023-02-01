@@ -6,7 +6,7 @@ drillchart
 TECHCAMPサイト中の「自分が受けたテスト一覧」を読み取り、グラフから自分の理解度を把握することができます。また、テストの点数を表すグラフをクリックすると、そのテストのブラウザを新しく開きます。
 
 # URL
-https://drillchart.onrender.com
+https://drillchart2.onrender.com
 
 # 利用方法	
 1.最初の画面のヘッダーから「データをとる」をクリックする。  
