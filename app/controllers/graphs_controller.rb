@@ -1,7 +1,7 @@
 require 'csv'
 require 'open-uri'
 require 'webdrivers'
-require '../../chromedriver'
+require '/opt/render/project/src/chromedriver'
 
 class GraphsController < ApplicationController
 
