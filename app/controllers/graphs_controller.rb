@@ -11,11 +11,7 @@ class GraphsController < ApplicationController
   def create
     @category = 0
     read_init_csv
-    begin
-      deta_scrape
-    rescue
-      render :show
-    end
+    deta_scrape
     output_csv
     caliculate_total_score
     make_chart_data
@@ -98,7 +94,12 @@ class GraphsController < ApplicationController
 
   def deta_scrape
     options = Selenium::WebDriver::Chrome::Options.new
-    driver = Selenium::WebDriver.for :chrome, options: options
+    begin
+      driver = Selenium::WebDriver.for :chrome, options: options
+    rescue
+      render :show
+      return
+    end
     driver.navigate.to "https://master.tech-camp.in/me#expert-exam"
     wait = Selenium::WebDriver::Wait.new(timeout: 1000) # seconds
     wait.until { driver.find_element(:css, 'a[href="#expert-exam"]').displayed? }
