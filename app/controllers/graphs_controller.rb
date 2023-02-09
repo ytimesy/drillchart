@@ -97,8 +97,7 @@ class GraphsController < ApplicationController
     begin
       driver = Selenium::WebDriver.for :chrome, options: options
     rescue
-      render :show
-      return
+      render :show and return
     end
     driver.navigate.to "https://master.tech-camp.in/me#expert-exam"
     wait = Selenium::WebDriver::Wait.new(timeout: 1000) # seconds
