@@ -93,10 +93,16 @@ class GraphsController < ApplicationController
   end
 
   def deta_scrape
+    begin
     options = Selenium::WebDriver::Chrome::Options.new
+    rescue => e
+      puts "#{e}"
+      render :show and return
+    end
     begin
       driver = Selenium::WebDriver.for :chrome, options: options
-    rescue
+    rescue => e
+      puts "#{e}"
       render :show and return
     end
     driver.navigate.to "https://master.tech-camp.in/me#expert-exam"
