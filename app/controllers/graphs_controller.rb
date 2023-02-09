@@ -22,6 +22,7 @@ class GraphsController < ApplicationController
     render :show
   end
 
+  
   def show
     @category = params[:id]
     read_csv
