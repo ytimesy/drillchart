@@ -11,7 +11,11 @@ class GraphsController < ApplicationController
   def create
     @category = 0
     read_init_csv
-    deta_scrape
+    begin
+      deta_scrape
+    rescue
+      render :show
+    end
     output_csv
     caliculate_total_score
     make_chart_data
