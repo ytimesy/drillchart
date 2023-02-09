@@ -5,17 +5,22 @@ require 'webdrivers'
 class GraphsController < ApplicationController
 
   def index
-    destroy
+    #destroy
   end
 
   def create
+    @rendered = false
     @category = 0
     read_init_csv
     deta_scrape
     output_csv
     caliculate_total_score
     make_chart_data
-    render :show
+    if @redered
+      puts "already render called"
+    else
+      render :show
+    end
   end
 
   
@@ -96,13 +101,15 @@ class GraphsController < ApplicationController
     begin
     options = Selenium::WebDriver::Chrome::Options.new
     rescue => e
-      puts "#{e}"
+      puts "#{e}" 
+      @rendered = true
       render :show and return
     end
     begin
       driver = Selenium::WebDriver.for :chrome, options: options
     rescue => e
       puts "#{e}"
+      @rendered = true
       render :show and return
     end
     driver.navigate.to "https://master.tech-camp.in/me#expert-exam"
