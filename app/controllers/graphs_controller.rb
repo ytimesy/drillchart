@@ -16,7 +16,7 @@ class GraphsController < ApplicationController
     output_csv
     caliculate_total_score
     make_chart_data
-    if @redered
+    if @rendered
       puts "already render called"
     else
       render :show
