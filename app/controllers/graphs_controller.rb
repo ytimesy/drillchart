@@ -13,12 +13,12 @@ class GraphsController < ApplicationController
     @category = 0
     read_init_csv
     deta_scrape
-    output_csv
-    caliculate_total_score
-    make_chart_data
     if @rendered
       puts "already render called"
     else
+      output_csv
+      caliculate_total_score
+      make_chart_data
       render :show
     end
   end
