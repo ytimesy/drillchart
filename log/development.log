@@ -5007,3 +5007,1090 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-02-12 09:08:51 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GraphsController#index as HTML
+  Rendering graphs/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 1082)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 92)
+  Rendered graphs/index.html.erb within layouts/application (Duration: 1864.2ms | Allocations: 1716619)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1908ms (Views: 1889.1ms | ActiveRecord: 0.0ms | Allocations: 1726484)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/image/hero.jpg"):
+  
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (6.0.6.1) lib/active_support/logger_silence.rb:36:in `silence'
+activesupport (6.0.6.1) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
+activesupport (6.0.6.1) lib/active_support/logger_silence.rb:36:in `silence'
+activesupport (6.0.6.1) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:08:56 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Started POST "/graphs" for ::1 at 2023-02-12 09:08:56 +0900
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 611)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by GraphsController#create as HTML
+  Parameters: {"authenticity_token"=>"q7aSuiQClk+s4Gn+nsOiPSvyPjGlB8YoR3svOQgooiAbFaJiDbBb6leiEaaNe8RPFm8Oj9e0/1crC81YwQY54g=="}
+Completed 500 Internal Server Error in 29689ms (ActiveRecord: 0.0ms | Allocations: 398149)
+
+
+  
+Selenium::WebDriver::Error::UnexpectedAlertOpenError (unexpected alert open: {Alert text : 入力されたEmail/パスワードの情報が間違っています。}
+  (Session info: chrome=109.0.5414.119)):
+  
+app/controllers/graphs_controller.rb:117:in `block in deta_scrape'
+app/controllers/graphs_controller.rb:117:in `deta_scrape'
+app/controllers/graphs_controller.rb:15:in `create'
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:09:39 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 459)
+
+
+Started GET "/graphs/0" for ::1 at 2023-02-12 09:09:39 +0900
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by GraphsController#show as HTML
+  Parameters: {"id"=>"0"}
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 681)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 8421)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 49703)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:09:41 +0900
+Started POST "/graphs" for ::1 at 2023-02-12 09:09:41 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Processing by GraphsController#create as HTML
+Can't verify CSRF token authenticity.
+  Parameters: {"authenticity_token"=>"y8skILOi04WcSGBFKwo6w0XS/rrcgWPjXDorwsR67YF7aBT4mhAeIGcKGB04slyxeE/OBK4yWpwwSsmjDVR2Qw=="}
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 671)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 18.6ms | Allocations: 8287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41819ms (Views: 38.4ms | ActiveRecord: 0.0ms | Allocations: 924221)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:10:29 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Started GET "/graphs/5" for ::1 at 2023-02-12 09:10:29 +0900
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by GraphsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 8417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 42980)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:11:40 +0900
+Started GET "/graphs/4" for ::1 at 2023-02-12 09:11:40 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Processing by GraphsController#show as HTML
+  Parameters: {"id"=>"4"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 702)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 22.0ms | Allocations: 8308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 181009)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:11:47 +0900
+Started GET "/graphs/3" for ::1 at 2023-02-12 09:11:47 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 451)
+
+
+Processing by GraphsController#show as HTML
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Parameters: {"id"=>"3"}
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 8611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 39753)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:11:55 +0900
+Started GET "/graphs/2" for ::1 at 2023-02-12 09:11:55 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Processing by GraphsController#show as HTML
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 449)
+
+
+  Parameters: {"id"=>"2"}
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 8580)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 181185)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:11:58 +0900
+Started GET "/graphs/1" for ::1 at 2023-02-12 09:11:59 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Processing by GraphsController#show as HTML
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 707)
+
+
+  Parameters: {"id"=>"1"}
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 8286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 177591)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:12:47 +0900
+Started GET "/graphs/0" for ::1 at 2023-02-12 09:12:47 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Processing by GraphsController#show as HTML
+Can't verify CSRF token authenticity.
+  Parameters: {"id"=>"0"}
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 8202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 177922)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:12:58 +0900
+Started GET "/graphs/5" for ::1 at 2023-02-12 09:12:58 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Processing by GraphsController#show as HTML
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 704)
+
+
+  Parameters: {"id"=>"5"}
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering graphs/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 675)
+  Rendered graphs/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 8498)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 179ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 181114)
+
+
+Started DELETE "/graphs/1" for ::1 at 2023-02-12 09:14:23 +0900
+Processing by GraphsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 449)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.6.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.6.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.6.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.6.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.6.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.6.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.6.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.6.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.6.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.6.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.0.6.1) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
